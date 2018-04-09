@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderModule } from './header/header.module';
+import { CadastroModule } from './cadastro/cadastro.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { HeaderModule } from './header/header.module';
     AppRoutingModule,
     LoginModule,
     HeaderModule,
+    CadastroModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
