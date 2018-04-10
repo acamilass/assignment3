@@ -2,6 +2,7 @@
 $color-buttons: #333333;
 $color-header-form: #333333;
 
+
 .container-flex{
     display: flex;
     direction: row;
@@ -28,7 +29,6 @@ $color-header-form: #333333;
 
   .form-header {
       background-color:$color-header-form;
-     
       height: 35px;
       display: flex;
       flex-direction: column;

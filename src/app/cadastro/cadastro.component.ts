@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { CadastroModel } from './cadastro.model';
 import { isNonNullObject } from '@firebase/util';
+import { HelperService } from '../shared/utils/helper.service';
 
 
 
@@ -24,6 +25,8 @@ export class CadastroComponent implements OnInit {
 
   constructor(private db: AngularFireDatabase) {
     this.cadastro = db.list('lista/cadastro');
+    HelperService.backgroundImage('../../assets/images/bg-login.jpg')
+    
   }
 
   ngOnInit() {
@@ -81,11 +84,10 @@ export class CadastroComponent implements OnInit {
 
   resetForm() {
     this.cadastroForm.reset();
+    
     this.nome.setErrors(null);
     this.email.setErrors(null);
     this.tempo.setErrors(null);
   }
-
-
 
 }
