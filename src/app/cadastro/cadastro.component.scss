@@ -16,10 +16,10 @@ $color-header-form: #333333;
 // texto de divulgacao
 
 .texto {
-    width: 420px;
+    width: 380px;
 
     .titulo {
-        font-size: 30px;
+        font-size: 29px;
         font-weight: bold;
         text-align: justify;
     }
@@ -79,14 +79,20 @@ $color-header-form: #333333;
 
   // responsivo
 
-  @media (max-width: 600px) 
+  @media (max-width: 725px) 
 {
     .container-flex {
         flex-direction: column;
         align-items: center;
     }
 
+    
+
     .texto {
         width: 80%;
+
+        .titulo {
+            text-align: left;
+        }
     }
 }
