@@ -2,16 +2,21 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent }  from './login/login.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
+// import { CadastroComponent } from './cadastro/cadastro.component';
+// import { AgredecimentoComponent } from './agredecimento/agredecimento.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CadastroComponent
+    loadChildren: 'app/cadastro/cadastro.module#CadastroModule'
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'agradecimento',
+    loadChildren: 'app/agradecimento/agradecimento.module#AgradecimentoModule'
   }
 ];
 

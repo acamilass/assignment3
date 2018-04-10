@@ -4,6 +4,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { CadastroModel } from './cadastro.model';
 import { isNonNullObject } from '@firebase/util';
 import { HelperService } from '../shared/utils/helper.service';
+import { Router } from '@angular/router';
 
 
 
@@ -23,7 +24,7 @@ export class CadastroComponent implements OnInit {
   public email: FormControl;
   public tempo: FormControl;
 
-  constructor(private db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase, private router: Router) {
     this.cadastro = db.list('lista/cadastro');
     HelperService.backgroundImage('../../assets/images/bg-login.jpg');
     
@@ -72,6 +73,7 @@ export class CadastroComponent implements OnInit {
     if (this.cadastroForm.valid) {
       this.cadastro.push(convertEmObjeto).once('value', () => {
         this.resetForm();
+        this.router.navigate(['/agradecimento']);
       }, (err) => {
         alert('Um erro ocorreu, tente novamente mais tarde!');
       });
