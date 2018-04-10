@@ -11,6 +11,18 @@ export class HelperService {
       d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
   }
 
+
+  static getIp() {
+    let http = new XMLHttpRequest;
+
+    http.open("get", "https://api.ipify.org/?format=jsonp&callback", false);
+
+    http.send();
+    let ip = http.responseText.split('"')[3];
+    return ip;
+
+}
+
   /**
    * 
    * @param pathImage : Caminho da imagem
