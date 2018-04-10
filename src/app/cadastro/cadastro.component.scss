@@ -13,9 +13,23 @@ $color-header-form: #333333;
   
 }
 
+
+
 .texto {
     width: 350px;
+
+    .titulo {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: justify;
+    }
+
+    .texto-conteudo {
+        text-align: justify;
+    }
 }
+
+
 
 
 //   form
