@@ -35,7 +35,7 @@ export class CadastroComponent implements OnInit {
     this.nome = new FormControl('', [
       Validators.required,
       Validators.minLength(5),
-      Validators.pattern(/^\w+\s+[\w\s]{1,22}/)
+      Validators.pattern(/^\w+\s+[\w\s]{1,22}/) // nome e sobre nome
     ]);
 
     this.email = new FormControl('', [
@@ -57,32 +57,33 @@ export class CadastroComponent implements OnInit {
   }
 
   save() {
+
     const nome = this.nome.value;
     const email = this.email.value;
     const tempo = this.tempo.value;
-    
 
     this.usuario = new CadastroModel(nome, email, tempo);
 
-    const obj = Object.assign({}, this.usuario);
+    const convertEmObjeto = Object.assign({}, this.usuario);
 
     if (this.cadastroForm.valid) {
-
-      this.cadastro.push(obj).once('value', () => {
-        // yourForm.reset(), yourForm.resetForm() don't work, but this does:
-      
-        this.cadastroForm.reset();
-        this.nome.setErrors(null);
-        this.email.setErrors(null);
-        this.tempo.setErrors(null);
-  
-       // alert(`mudar de pagina`);
+      this.cadastro.push(convertEmObjeto).once('value', () => {
+        this.resetForm();
       }, (err) => {
         alert('Um erro ocorreu, tente novamente mais tarde!');
       });
 
+    } else {
+      alert('Preencha o formulário corretamente.')
     }
 
+  }
+
+  resetForm() {
+    this.cadastroForm.reset();
+    this.nome.setErrors(null);
+    this.email.setErrors(null);
+    this.tempo.setErrors(null);
   }
 
 
