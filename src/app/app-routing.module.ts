@@ -8,7 +8,8 @@ import { LoginComponent }  from './login/login.component';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: 'app/cadastro/cadastro.module#CadastroModule'
+    loadChildren: 'app/cadastro/cadastro.module#CadastroModule',
+    pathMatch: 'full'
   },
   {
     path: 'login',

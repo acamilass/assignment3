@@ -73,7 +73,7 @@ export class CadastroComponent implements OnInit {
     if (this.cadastroForm.valid) {
       this.cadastro.push(convertEmObjeto).once('value', () => {
         this.resetForm();
-        this.router.navigate(['/agradecimento']);
+        this.router.navigate(['/agradecimento'], { skipLocationChange: true });
       }, (err) => {
         alert('Um erro ocorreu, tente novamente mais tarde!');
       });
