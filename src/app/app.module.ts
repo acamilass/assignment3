@@ -8,6 +8,7 @@ import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderModule } from './header/header.module';
 import { CadastroModule } from './cadastro/cadastro.module';
+import { AgredecimentoModule } from './agredecimento/agredecimento.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CadastroModule } from './cadastro/cadastro.module';
     LoginModule,
     HeaderModule,
     CadastroModule,
+    AgredecimentoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,7 +25,7 @@ export class CadastroComponent implements OnInit {
 
   constructor(private db: AngularFireDatabase) {
     this.cadastro = db.list('lista/cadastro');
-    HelperService.backgroundImage('../../assets/images/bg-login.jpg')
+    HelperService.backgroundImage('../../assets/images/bg-login.jpg');
     
   }
 
