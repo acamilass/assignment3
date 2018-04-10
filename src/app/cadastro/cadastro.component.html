@@ -1,3 +1,44 @@
-<p>
-  cadastro works!
-</p>
+<div class="container-flex">
+
+  <!-- Conteudo textual -->
+  <div class="texto">
+    <h1 class="titulo">TITULO</h1>
+    <p class="texto-conteudo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt veritatis perferendis pariatur. Est sit fugit nobis animi
+      illo labore. Provident hic, aliquam facilis unde nihil ratione quidem eveniet illo! Maxime?</p>
+  </div>
+  <!-- Conteudo textual -->
+
+  <mat-card class="form-card">
+    <mat-card-header class="form-header">
+      <mat-card-title class="form-titulo">Cadastro</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <form (ngSubmit)="save()" novalidate [formGroup]="cadastroForm" id="myForm" class="myForm">
+        <mat-form-field>
+          <mat-icon matPrefix>person</mat-icon>
+          <div class="space-placeholder"></div>
+          <input formControlName="nome" style="font-size: 1.2em" placeholder="Nome Completo" matInput type="text" required/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon matPrefix>email</mat-icon>
+          <input formControlName="email" style="font-size: 1.2em" placeholder="email" matInput type="email" required/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-icon matPrefix>alarm</mat-icon>
+          <mat-select formControlName="tempo" placeholder="Tempo como Dev" [(value)]="selected" required>
+            <mat-option value="0-3">0-3 anos</mat-option>
+            <mat-option value="3-6">3-6 anos</mat-option>
+            <mat-option value="6+">6+ anos</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      
+          <button type="submit" mat-raised-button class="form-button">Accent</button>
+     
+
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
