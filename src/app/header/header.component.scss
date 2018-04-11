@@ -1,3 +1,11 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    
+}
 .logo-container {     
     background-color: rgba(15, 15, 15, 0.356);     
     text-align: center;
