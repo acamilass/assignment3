@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
+import { HeaderModule } from './header/header.module';
 
 
 
@@ -18,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     LoginModule,
     SharedModule,
+    HeaderModule,
     
   ],
   providers: [],

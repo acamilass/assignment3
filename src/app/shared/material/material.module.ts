@@ -11,6 +11,15 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
     MatToolbarModule, 
     MatIconModule
   ],
-  declarations: []
+  declarations: [],
+
+  exports: [
+    MatButtonModule, 
+    MatCardModule, 
+    MatMenuModule, 
+    MatToolbarModule, 
+    MatIconModule
+  ]
+
 })
 export class MaterialModule { }

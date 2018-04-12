@@ -6,6 +6,8 @@ import { LoginComponent } from './login.component';
 
 import { AngularFireModule } from 'angularfire2';
 
+import { SharedModule } from '../shared/shared.module';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyA3rC0FnpR4N2GppLlwYuhlnjop1mzXNUM",
   authDomain: "xpassignment3.firebaseapp.com",
@@ -19,7 +21,8 @@ export const firebaseConfig = {
   imports: [
     CommonModule,
     LoginRoutingModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    SharedModule
   ],
   declarations: [LoginComponent],
   exports: [LoginComponent]
