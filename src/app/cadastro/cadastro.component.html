@@ -11,7 +11,10 @@
 
   <mat-card class="form-card animated tada">
     <mat-card-header class="form-header">
-      <mat-card-title class="form-titulo">Cadastro</mat-card-title>
+      <mat-card-title >
+        <span class="form-titulo">Preencha o formulário</span> <br>
+        <span class="form-titulo_texto">E tenha <span class="form-titulo_texto_color">acesso exclusivo</span> à planilha</span>
+      </mat-card-title>
     </mat-card-header>
     <mat-card-content>
 
@@ -27,7 +30,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-icon matPrefix>alarm</mat-icon>
-          <mat-select formControlName="tempo" placeholder="Tempo como Dev" required>
+          <mat-select formControlName="tempo" placeholder="Tempo como dev" required>
             <mat-option value="0-3">0-3 anos</mat-option>
             <mat-option value="3-6">3-6 anos</mat-option>
             <mat-option value="6+">6+ anos</mat-option>
@@ -35,7 +38,9 @@
         </mat-form-field>
 
       
-          <button type="submit" mat-raised-button class="form-button" [disabled]="!cadastroForm.valid">Cadastre-se</button>
+          <button type="submit" mat-raised-button class="form-button" [disabled]="!cadastroForm.valid">
+            BAIXE AGORA! »
+          </button>
      
 
       </form>
