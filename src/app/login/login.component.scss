@@ -1,0 +1,105 @@
+
+.container-flex {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.screen-left {
+   
+   float:left;
+   width: 50%;
+   height: 100vh;
+   background-color: #00FF6A;
+}
+
+.login-img {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left: 60px;
+    top: 40px;
+   
+   
+}
+
+.content {
+    display: inline-block;
+    width: 50%;
+    height: 100vh;
+    background-color: #333333;
+
+    .content_adjust {
+        margin-top: 30px;
+        margin-left: 80px;
+        color: #FCFCFC;
+        
+
+        .brand {
+            display: block;
+            width: 12.875em;
+            height: 38px;
+            
+        }
+
+        .text {
+            display: inline-block;
+            width: 100%;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 18px;
+            
+        }
+
+        .myForm {
+            
+            .quest {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: bold;
+                line-height: normal;
+                font-size: 15px;
+            }
+
+            mat-button-toggle {
+                background: rgba(0, 255, 12, 0.78);
+                
+                &:not(:last-child) {
+                    border-right: solid 10px #333333;
+                }
+                
+
+                .toggle-text {
+                    font-family: 'Quicksand' !important;
+                    font-style: normal;
+                    font-weight: bold;
+                    line-height: normal;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #F2F2F2; 
+                }
+
+                .quest2 {
+                    font-family: 'Montserrat' !important;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: normal;
+                    font-size: 14px;
+                    color: #FCFCFC;
+                    margin-top: 40px !important;
+                }
+
+                .github {
+                    background-color: #000000;
+                }
+            }
+        }
+
+    
+    
+    }
+
+    
+
+}
