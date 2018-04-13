@@ -73,6 +73,7 @@
 
             mat-button-toggle {
                 background: rgba(0, 255, 12, 0.78);
+                font-size: 0.8em;
                 
                 &:not(:last-child) {
                     border-right: solid 10px #333333;
@@ -90,9 +91,7 @@
                 }
 
                 
-                .github {
-                    background-color: #000000;
-                }
+                
             }
 
             .quest2 {
@@ -103,6 +102,10 @@
                 font-size: 14px;
                 color: #FCFCFC;
                 margin-top: 40px !important;
+            }
+
+            .github {
+                background-color: #000000;
             }
 
         }
