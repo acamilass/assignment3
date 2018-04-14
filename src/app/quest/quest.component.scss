@@ -5,15 +5,19 @@
 .container {
     background: url("../../assets/images/bg-questoes-desktop.png");
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity !important;
+    mix-blend-mode: luminosity;
     width: 100%;
     height: 100vh; 
-    mix-blend-mode: luminosity;
-    float: left;
+    position: absolute;
 
     .progressbar-section {
+    
         height: 60px;
-        margin-left: 30%;
+        text-align: center;
         margin-top: 40px;
+        color: #fff;
 
             .progressbar {
                 width: 50%;   
@@ -56,14 +60,14 @@
                 justify-content: center;
                 text-align: center;
             }
+
+            .selecao {
+                width: 100%;
+            }
         }   
         
     }
 
   
 }
-}
-label {
-    width: 100% !important;
-    height: 100% !important;
 }

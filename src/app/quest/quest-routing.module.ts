@@ -4,7 +4,7 @@ import { QuestComponent } from './quest.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: QuestComponent
   }
 ];

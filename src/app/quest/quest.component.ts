@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSelectionList, MatSelectionListChange } from '@angular/material';
 
 @Component({
   selector: 'app-quest',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestComponent implements OnInit {
 
+  
+  @ViewChild(MatSelectionList) questions: MatSelectionList;
+
+
   constructor() { }
 
   ngOnInit() {
+    this.questions.selectionChange.subscribe((s: MatSelectionListChange) => {          
+      this.questions.deselectAll();
+      s.option.selected = true;
+  });
   }
 
 }

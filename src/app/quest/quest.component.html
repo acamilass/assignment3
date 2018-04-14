@@ -7,7 +7,7 @@
           color="accent"
           mode="determinate"
           value="50"
-          bufferValue="75">
+          bufferValue="10">
       </mat-progress-bar>
       <span class="progressbar-text">1/10</span>
     </div>
@@ -15,13 +15,25 @@
 
     <div class="questions">
       <img src="../../assets/images/quest/1.PNG" alt="pergunta1">
-      <form>        
-        <mat-radio-group>          
+      <form> 
+        
+          <mat-selection-list #questions>
               <div class="agrupar-quest">
-                <div class="alternativa"><span class="letra">A</span></div>
-                <mat-radio-button value="1">Option 1</mat-radio-button>        
+                  <div class="alternativa"><span class="letra">A</span></div>
+                  <mat-list-option class="selecao"
+                                   [value]="a">
+                    Pergunta  1
+                  </mat-list-option>
               </div>
-          </mat-radio-group>
+              <div class="agrupar-quest">
+                  <div class="alternativa"><span class="letra">A</span></div>
+                  <mat-list-option class="selecao"
+                                   [value]="a">
+                    Pergunta  1
+                  </mat-list-option>
+              </div>
+            </mat-selection-list>
+
       </form>
     </div>
 
