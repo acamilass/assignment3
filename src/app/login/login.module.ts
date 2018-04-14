@@ -24,7 +24,6 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     SharedModule
   ],
-  declarations: [LoginComponent],
-  exports: [LoginComponent]
+  declarations: [LoginComponent]
 })
 export class LoginModule { }
