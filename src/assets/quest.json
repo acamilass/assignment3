@@ -1,0 +1,100 @@
+{
+    "quests": [
+        {
+            "pergunta": 1,
+            "respostas": [
+                {"letra":  "A", "resp": "document.getElementById('demo').innerHTML = 'Hello World!';"},
+                {"letra":  "B", "resp": "document.getElementByName('p').innerHTML = 'Hello World!';"},
+                {"letra":  "C", "resp": "#demo.innerHTML = 'Hello World!';"},
+                {"letra":  "D", "resp": "document.getElement('p').innerHTML = 'Hello World!';"}
+            ]
+        },
+        {
+            "pergunta": 2,
+            "respostas": [
+                {"letra":  "A", "resp": "load e onclick"},
+                {"letra":  "B", "resp": "onload e onchange"},
+                {"letra":  "C", "resp": "onchange e onreload"},
+                {"letra":  "D", "resp": "load e onchange"}        
+            ]
+        },
+        {
+            "pergunta": 3,
+            "respostas": [
+                {"letra":  "A", "resp": "$ vetorEmails = array('email C', 'email B', 'email A');"},
+                {"letra":  "B", "resp": "vetorEmail = 'email C';\n vetorEmail = 'email B';\n vetorEmail = 'email A';"},
+                {"letra":  "C", "resp": "dimension vetorEmail[3] = array('email C', 'email B', 'email A');"},
+                {"letra":  "D", "resp": "vetorEmail('email C') = 1;\n vetorEmail('email B') = 2;\n vetorEmail('email A') = 3;"},
+                {"letra":  "E", "resp": "var vetorEmails = ['email C', 'email B', 'email A'];"}
+            ]
+        },
+        {
+            "pergunta": 4,
+            "respostas": [
+                {"letra":  "A", "resp": "Colin Ihrig"},
+                {"letra":  "B", "resp": "Aurelio de Rosa"},
+                {"letra":  "C", "resp": "John Doe"},
+                {"letra":  "D", "resp": "Undefined"}               
+            ]
+        },
+        {
+            "pergunta": 5,
+            "respostas": [
+                {"letra":  "A", "resp": "V – V – F – F – F – V."},
+                {"letra":  "B", "resp": "F – V – V – F – F – V."},
+                {"letra":  "C", "resp": "V – F – F – V – F – F."},
+                {"letra":  "D", "resp": "V – V – V – F – V – V."},
+                {"letra":  "E", "resp": "V – V – V – F – F – F."}
+            ]
+        },
+        {
+            "pergunta": 6,
+            "respostas": [
+                {"letra":  "A", "resp": "$('button').click(function(){$('p#par').hide();});"},
+                {"letra":  "B", "resp": "$('button:eq(0)').click(function().defineProperty('p.par').hide());"},
+                {"letra":  "C", "resp": "$('button').click(function(){$('p.par').hidden();});"},
+                {"letra":  "D", "resp": "$('button:eq(1)').click(function(){$('p#par').hide();});"},
+                {"letra":  "E", "resp": "$('button').click(function(){$('p.par').hide();});"}
+            ]
+        },
+        {
+            "pergunta": 7,
+            "respostas": [
+                {"letra":  "A", "resp": "1:0"},
+                {"letra":  "B", "resp": "2:1"},
+                {"letra":  "C", "resp": "1:1"},
+                {"letra":  "D", "resp": "1:1 e 2:2"},
+                {"letra":  "E", "resp": "1:0 e 2:1"}
+            ]
+        },
+        {
+            "pergunta": 8,
+            "respostas": [
+                {"letra":  "A", "resp": "a remoção de um elemento de uma pilha."},
+                {"letra":  "B", "resp": "a remoção de um elemento de uma fila."},
+                {"letra":  "C", "resp": "a inserção de um elemento em uma fila."},
+                {"letra":  "D", "resp": "a inserção de um elemento em uma pilha."}                
+            ]
+        },
+        {
+            "pergunta": 9,
+            "respostas": [
+                {"letra":  "A", "resp": "0"},
+                {"letra":  "B", "resp": "1"},
+                {"letra":  "C", "resp": "9"},
+                {"letra":  "D", "resp": "10"},
+                {"letra":  "E", "resp": "true"}
+            ]
+        },
+        {
+            "pergunta": 10,
+            "respostas": [
+                {"letra":  "A", "resp": ""},
+                {"letra":  "B", "resp": ""},
+                {"letra":  "C", "resp": ""},
+                {"letra":  "D", "resp": ""},
+                {"letra":  "E", "resp": ""}
+            ]
+        }
+    ]
+}

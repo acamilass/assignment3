@@ -6,10 +6,10 @@
           class="progressbar"
           color="accent"
           mode="determinate"
-          value="50"
+          value="{{index+1}}0"
           bufferValue="10">
       </mat-progress-bar>
-      <span class="progressbar-text">1/10</span>
+      <span class="progressbar-text">{{index+1}}/10</span>
     </div>
 
 
@@ -18,21 +18,24 @@
       <form> 
         
           <mat-selection-list #questions>
-              <div class="agrupar-quest">
+              <!-- <div class="agrupar-quest">
                   <div class="alternativa"><span class="letra">A</span></div>
                   <mat-list-option class="selecao"
                                    [value]="a">
                     Pergunta  1
                   </mat-list-option>
-              </div>
-              <div class="agrupar-quest">
-                  <div class="alternativa"><span class="letra">A</span></div>
-                  <mat-list-option class="selecao"
-                                   [value]="a">
-                    Pergunta  1
+              </div> -->
+              <div class="agrupar-quest" *ngFor="let resposta of quests[index].respostas">
+                  <div class="alternativa"><span class="letra">{{resposta.letra}}</span></div>
+                  <mat-list-option class="selecao" [selected]
+                                   [value]="resposta">
+                    {{resposta.resp}}
                   </mat-list-option>
               </div>
             </mat-selection-list>
+            <div> 
+              <button (click)="nextQuestion($event)" style="padding: 0 50px; background: #00FF6A; color: #FFF; font-weight: bold; margin-top: 30px; float: right;" mat-raised-button>Próxima</button>
+            </div>  
 
       </form>
     </div>
