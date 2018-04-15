@@ -1,0 +1,16 @@
+.main {
+    background-color: #4F4F4F;
+    width: 100%;
+    height: 100vh; 
+    font-family: 'Quicksand', sans-serif;
+
+    .container {
+        background: url("../../assets/images/bg-instrucoes-desktop.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh; 
+        position: absolute;
+    } //container
+
+} //main

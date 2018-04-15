@@ -1,0 +1,16 @@
+{
+    "instrucoes": [
+        {
+            "lista": [
+               {"item": "Teste escrito? Aqui não mais! Mostre suas habilidades reais em nossa plataforma!"},
+               {"item": "Receba feedback de como você está posicionado no mercado e o que precisa para alavancar sua carreira!"},
+               {"item": "Questões claras e objetivas, do jeito que tem que ser!"},
+               {"item": "Teste técnico para medir a parte lógica de forma coerente com a vaga!"},
+               {"item": "Competência técnica medida por quem entende o assunto!"},
+               {"item": "Júnior, pleno, sênior, uma avaliação específica para cada um dos níveis!"},
+               {"item": "Direto ao ponto! Um único teste que será usado por diversas empresas com vagas semelhantes!"},
+               {"item": "Receba um relatório de desempenho do processo seletivo!"}            
+            ]
+        }
+    ]
+}
