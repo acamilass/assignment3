@@ -1,10 +1,11 @@
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <div class="main">
   <div class="container">
 
     <div class="progressbar-section">
       <mat-progress-bar
           class="progressbar"
-          color="accent"
+          color="primary"
           mode="determinate"
           value="{{index+1}}0"
           bufferValue="10">
@@ -26,15 +27,15 @@
                   </mat-list-option>
               </div> -->
               <div class="agrupar-quest" *ngFor="let resposta of quests[index].respostas">
-                  <div class="alternativa"><span class="letra">{{resposta.letra}}</span></div>
-                  <mat-list-option class="selecao" [selected]
+                  <div class="alternativa"><span style="font-weight: bold" class="letra">{{resposta.letra}}</span></div>
+                  <mat-list-option style="font-family: 'Quicksand', sans-serif;" class="selecao" [selected]
                                    [value]="resposta">
                     {{resposta.resp}}
                   </mat-list-option>
               </div>
             </mat-selection-list>
             <div> 
-              <button (click)="nextQuestion($event)" style="padding: 0 50px; background: #00FF6A; color: #FFF; font-weight: bold; margin-top: 30px; float: right;" mat-raised-button>Próxima</button>
+              <button (click)="nextQuestion($event)" style="padding: 10px 40px; background: #00FF6A; font-weight: bold; font-size: 16px; margin-top: 30px; float: right;" mat-raised-button>Próxima</button>
             </div>  
 
       </form>
