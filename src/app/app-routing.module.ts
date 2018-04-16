@@ -11,8 +11,12 @@ const routes: Routes = [
     loadChildren: 'app/quest/quest.module#QuestModule'
   },
   {
-    path: '',
+    path: 'info',
     loadChildren: 'app/instrucoes/instrucoes.module#InstrucoesModule'
+  }  ,
+  {
+    path: '',
+    loadChildren: 'app/resultado/resultado.module#ResultadoModule'
   }
 ];
 
