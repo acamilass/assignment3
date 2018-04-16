@@ -2,6 +2,7 @@
 $background-color: #F8F8F8;
 $header-color: #333333;
 $header-text-color: #00FF6A;
+$font-family: 'Quicksand', sans-serif;
 
 .header {
 
@@ -9,7 +10,7 @@ $header-text-color: #00FF6A;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 60px;
+    height: 140px;
     background-color: $header-color;
     font-weight: bolder;
     
@@ -35,8 +36,15 @@ $header-text-color: #00FF6A;
         .img-ilustrativa {  display: none; }
 
         & > button {
+            font-family: 'Quicksand';
             background: #00FF6A;
-            font-weight: bold;
+            font-weight: bolder;
+            width: 290px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
         }
     } // conteudo
 
@@ -45,11 +53,14 @@ $header-text-color: #00FF6A;
         float: left;
         height: 454px;
         width: 40%;
+        margin-top: 68px;
 
     } // conteudo
 
     .texto {
+        font-family: 'Quicksand';
         margin-top: 30px;
+        margin-right: 70px;
     }
 
    
