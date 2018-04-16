@@ -7,8 +7,12 @@ const routes: Routes = [
     loadChildren: 'app/login/login.module#LoginModule'
   },
   {
-    path: '',
+    path: 'quests',
     loadChildren: 'app/quest/quest.module#QuestModule'
+  },
+  {
+    path: '',
+    loadChildren: 'app/instrucoes/instrucoes.module#InstrucoesModule'
   }
 ];
 
