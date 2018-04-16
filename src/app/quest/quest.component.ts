@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSelectionList, MatSelectionListChange } from '@angular/material';
 import { QuestService } from './quest.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-quest',
@@ -8,29 +9,35 @@ import { QuestService } from './quest.service';
   styleUrls: ['./quest.component.scss'],
   providers: [QuestService]
 })
-export class QuestComponent implements OnInit, AfterViewInit {
+export class QuestComponent implements OnInit {
 
 
-  public selected: any;
+  public respostas: String[] = [];
+  public pergunta: string;
   public index: number;
+  public img: string = `../../assets/images/quest/1.PNG`;
+  public questFrom: FormGroup;
+  public resposta: FormControl;
+
   @ViewChild(MatSelectionList) questions: MatSelectionList;
 
   public quests: any = [
-    {respostas: []}
+    { respostas: [] }
   ];
   constructor(private quest: QuestService) {
 
   }
-  ngAfterViewInit(): void {
 
-  }
 
   ngOnInit() {
 
-    this.index=0;
+    this.createForm();
+    this.index = 0;
     this.quest.getQuests().subscribe((pergunta: any) => {
       console.log(pergunta.json());
+      
       this.quests = pergunta.json().quests // array;
+      this.pergunta = this.quests[0].pergunta;
     });
 
     this.questions.selectionChange.subscribe((s: MatSelectionListChange) => {
@@ -41,10 +48,19 @@ export class QuestComponent implements OnInit, AfterViewInit {
 
 
   nextQuestion(event) {
-    console.log('this.questions');
-    console.log(this.selected);
     event.preventDefault();
-    return this.index++;
+    this.respostas.push(this.resposta.value[0].letra);
+    console.log(this.respostas);
+    this.index++
+    this.img =  `../../assets/images/quest/${this.index + 1}.PNG` ;
+  }
+
+  createForm() {
+
+    this.resposta = new FormControl({value: '', disabled: false}, Validators.required);
+    this.questFrom = new FormGroup({
+      'resposta': this.resposta
+    });
   }
 
 }

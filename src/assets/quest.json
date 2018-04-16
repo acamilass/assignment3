@@ -22,9 +22,9 @@
             "pergunta": 3,
             "respostas": [
                 {"letra":  "A", "resp": "$ vetorEmails = array('email C', 'email B', 'email A');"},
-                {"letra":  "B", "resp": "vetorEmail = 'email C';\n vetorEmail = 'email B';\n vetorEmail = 'email A';"},
+                {"letra":  "B", "resp": "vetorEmail = 'email C';<br> vetorEmail = 'email B';<br> vetorEmail = 'email A';"},
                 {"letra":  "C", "resp": "dimension vetorEmail[3] = array('email C', 'email B', 'email A');"},
-                {"letra":  "D", "resp": "vetorEmail('email C') = 1;\n vetorEmail('email B') = 2;\n vetorEmail('email A') = 3;"},
+                {"letra":  "D", "resp": "vetorEmail('email C') = 1;<br> vetorEmail('email B') = 2;<br> vetorEmail('email A') = 3;"},
                 {"letra":  "E", "resp": "var vetorEmails = ['email C', 'email B', 'email A'];"}
             ]
         },
@@ -51,7 +51,7 @@
             "pergunta": 6,
             "respostas": [
                 {"letra":  "A", "resp": "$('button').click(function(){$('p#par').hide();});"},
-                {"letra":  "B", "resp": "$('button:eq(0)').click(function().defineProperty('p.par').hide());"},
+                {"letra":  "B", "resp": "$('button:eq(0)').click(\nfunction().defineProperty('p.par').hide());"},
                 {"letra":  "C", "resp": "$('button').click(function(){$('p.par').hidden();});"},
                 {"letra":  "D", "resp": "$('button:eq(1)').click(function(){$('p#par').hide();});"},
                 {"letra":  "E", "resp": "$('button').click(function(){$('p.par').hide();});"}

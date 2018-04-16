@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-body {    
+html, body { 
+    height: 100%; 
+    width: 100%;
+    padding: 0; 
     margin: 0; 
 }
+
 
 * {     
     text-rendering: optimizeLegibility;     
@@ -14,4 +18,23 @@ body {
     -webkit-tap-highlight-color: transparent;     
     -webkit-box-sizing: border-box;     
     box-sizing: border-box; 
+}
+
+
+// periodically check this issue to remove these css lines
+.mat-list .mat-list-item .mat-list-icon, 
+.mat-list .mat-list-option .mat-list-icon, 
+.mat-nav-list .mat-list-item .mat-list-icon, 
+.mat-nav-list .mat-list-option .mat-list-icon, 
+.mat-selection-list .mat-list-item .mat-list-icon, 
+.mat-selection-list .mat-list-option .mat-list-icon {
+  padding: 0 16px 0 0 !important;
+}
+.mat-list .mat-list-item .mat-list-text, 
+.mat-list .mat-list-option .mat-list-text, 
+.mat-nav-list .mat-list-item .mat-list-text, 
+.mat-nav-list .mat-list-option .mat-list-text, 
+.mat-selection-list .mat-list-item .mat-list-text, 
+.mat-selection-list .mat-list-option .mat-list-text {
+  padding-right: 0 !important;
 }

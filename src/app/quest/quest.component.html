@@ -1,45 +1,45 @@
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-<div class="main">
-  <div class="container">
 
-    <div class="progressbar-section">
-      <mat-progress-bar
-          class="progressbar"
-          color="primary"
-          mode="determinate"
-          value="{{index+1}}0"
-          bufferValue="10">
-      </mat-progress-bar>
-      <span class="progressbar-text">{{index+1}}/10</span>
+<div class="container-fluid bg">
+    <div class="container">
+
+        <div class="progressbar-section">
+            <mat-progress-bar
+                class="progressbar"
+                color="primary"
+                mode="determinate"
+                value="{{index+1}}0"
+                bufferValue="10">
+            </mat-progress-bar>
+            <span class="progressbar-text">{{index+1}}/10</span>
+        </div> <!-- progressbar -->
+
+        <div class="questions">
+     
+            <form class="questFrom" novalidate [formGroup]="questFrom" (ngSubmit)="nextQuestion($event)"> 
+              <img [src]="img" alt="pergunta1">
+              
+              
+              
+                <mat-selection-list #questions formControlName="resposta">
+                    <div class="agrupar-quest" *ngFor="let resposta of quests[index].respostas">
+                        <div class="alternativa"><span style="font-weight: bold" class="letra">{{resposta.letra}}</span></div>
+                        <mat-list-option class="selecao" 
+                                         [selected]
+                                         [value]="resposta">
+                         <span class="text" [outerHTML]="resposta.resp"></span> 
+                        </mat-list-option>
+                    </div>
+                </mat-selection-list>
+      
+                 <div class="next">
+                    <button [disabled]="!questFrom.valid" type="submit" mat-raised-button>Próxima</button>
+                  </div>
+      
+            </form>
+          </div>
+
+
+
     </div>
-
-
-    <div class="questions">
-      <img src="../../assets/images/quest/1.PNG" alt="pergunta1">
-      <form> 
-        
-          <mat-selection-list #questions>
-              <!-- <div class="agrupar-quest">
-                  <div class="alternativa"><span class="letra">A</span></div>
-                  <mat-list-option class="selecao"
-                                   [value]="a">
-                    Pergunta  1
-                  </mat-list-option>
-              </div> -->
-              <div class="agrupar-quest" *ngFor="let resposta of quests[index].respostas">
-                  <div class="alternativa"><span style="font-weight: bold" class="letra">{{resposta.letra}}</span></div>
-                  <mat-list-option style="font-family: 'Quicksand', sans-serif;" class="selecao" [selected]
-                                   [value]="resposta">
-                    {{resposta.resp}}
-                  </mat-list-option>
-              </div>
-            </mat-selection-list>
-            <div> 
-              <button (click)="nextQuestion($event)" style="padding: 10px 40px; background: #00FF6A; font-weight: bold; font-size: 16px; margin-top: 30px; float: right;" mat-raised-button>Próxima</button>
-            </div>  
-
-      </form>
-    </div>
-
-  </div>
+  
 </div>
