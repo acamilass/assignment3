@@ -89,11 +89,10 @@
         {
             "pergunta": 10,
             "respostas": [
-                {"letra":  "A", "resp": ""},
-                {"letra":  "B", "resp": ""},
-                {"letra":  "C", "resp": ""},
-                {"letra":  "D", "resp": ""},
-                {"letra":  "E", "resp": ""}
+                {"letra":  "A", "resp": "Expõe uma API simples"},
+                {"letra":  "B", "resp": "Minificação"},
+                {"letra":  "C", "resp": "Ambos Expõe uma API simples e Minificação"},
+                {"letra":  "D", "resp": " Nenhuma das mencionadas"}
             ]
         }
     ]
