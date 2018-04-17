@@ -1,7 +1,7 @@
 <div class="container-flex">
 
   <!-- conteudo da esquerda -->
-  <div class="screen-left">
+  <div class="screen-left animated bounceInUp">
     
   </div>
   <!-- conteudo da esquerda -->
@@ -9,8 +9,8 @@
   <!-- conteudo da direita -->
   <div class="content">
     <div class="content_adjust">
-      <img class="brand" src="../../assets/images/logo-header-FINAL.png" alt="logo">
-      <div class="text">
+      <img class="brand animated bounceInLeft" src="../../assets/images/logo-header-FINAL.png" alt="logo">
+      <div class="text animated zoomInDown">
 
         <h3 class="text-titulo">Descubra como está seu conhecimento em Javascript e receba um feedback!</h3>
         <p class="text-conteudo">Estamos desenvolvendo uma plataforma que analisa os conhecimentos de profissionais da área de desenvolvimento e TI. Queremos criar uma comunidade que quer testar e melhorar suas habilidades, ao mesmo tempo que, mostramos os bons resultados dos seus testes para empresas com vagas na área em aberto, caso você esteja procurando emprego. 
@@ -21,40 +21,38 @@
 
         <!-- quest 1 -->
         <div class="select">
-          <p class="quest">Há quanto tempo você é dev?</p>
-          <mat-button-toggle-group #group="matButtonToggleGroup" 
+          <p class="quest animated zoomInUp">Há quanto tempo você é dev?</p>
+          <mat-button-toggle-group class="animated shake"
+                                  #group="matButtonToggleGroup" 
                                   (change)="onChangeToggle(group.value)">
-            <mat-button-toggle aria-label="0-3 anos" value="0-3 anos">
+            <mat-button-toggle class="animated fadeInLeft" aria-label="0-3 anos" value="0-3 anos">
               <span class="toggle-text">0-3 anos</span>
             </mat-button-toggle>
-            <mat-button-toggle aria-label="3-6 anos" value="3-6 anos">
+            <mat-button-toggle class="animated fadeInDown" aria-label="3-6 anos" value="3-6 anos">
               <span class="toggle-text">3-6 anos</span>
             </mat-button-toggle>
-            <mat-button-toggle aria-label="3-6 anos" value="+6 anos">
+            <mat-button-toggle class="animated fadeInRight" aria-label="3-6 anos" value="+6 anos">
               <span class="toggle-text">+6 anos</span>
             </mat-button-toggle>
           </mat-button-toggle-group>
         </div>
 
 
-        <p class="quest2">Para começar, faça o seu login com:</p>
+        <p class="quest2 animated flash">Para começar, faça o seu login com:</p>
         <div class="botoes">
-          <button [disabled]="!disable" (click)="loginFacebook($event)" mat-fab style="background-color: #4267B2">
-
+          <button class="animated fadeInLeft" [disabled]="!disable" (click)="loginFacebook($event)" mat-fab style="background-color: #4267B2">
             <mat-icon aria-label="facebook">
               <i class="fab fa-facebook-f"></i>
             </mat-icon>
           </button>
 
-          <button [disabled]="!disable" (click)="loginGoogle($event)" mat-fab style="background-color: #DB4437">
-
+          <button class="animated fadeInDown" [disabled]="!disable" (click)="loginGoogle($event)" mat-fab style="background-color: #DB4437">
             <mat-icon aria-label="google">
               <i class="fab fa-google-plus-g"></i>
             </mat-icon>
           </button>
 
-          <button [disabled]="!disable" (click)="loginGit($event)" mat-fab class="github" style="background-color: black">
-
+          <button class="animated flash" [disabled]="!disable" (click)="loginGit($event)" mat-fab class="github" style="background-color: black">
             <mat-icon aria-label="github">
               <i class="github fab fa-github"></i>
             </mat-icon>
