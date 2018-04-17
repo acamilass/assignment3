@@ -16,6 +16,7 @@ export class ResultadoComponent implements OnInit {
   private resultado: resultado = {};
   public conhecimento: string;
   public imagem: string;
+  public texto: string;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -61,15 +62,18 @@ export class ResultadoComponent implements OnInit {
       case ( 5 < score &&  score <= 10):
         this.conhecimento = 'Pleno'
         this.imagem = '../../assets/images/pleno.png'
+        this.texto = ``;
         break;
       case ( 11 <= score):
         this.conhecimento = 'Senior'
-        this.imagem = '../../assets/images/senior.png'
+        this.imagem = '../../assets/images/senior.png';
+        this.texto = ``;
         break;
   
       default:
         this.conhecimento = 'Júnior'
-        this.imagem = '../../assets/images/junior.png'
+        this.imagem = '../../assets/images/junior.png';
+        this.texto = ``;
         break;
     }
   }

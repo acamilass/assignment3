@@ -7,7 +7,7 @@
     
         <img class="result-image" [src]="imagem" alt="imagem ilustrativa">
         <div class="conteudo">
-          <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea dolore doloremque unde hic quasi similique enim sapiente, amet ratione? Eligendi nobis inventore neque nemo ratione facere reiciendis, quam voluptates corrupti.</p>
+          <p class="texto" [outerHTML]="texto"></p>
           
           <img class="img-ilustrativa" src="../../assets/images/bg-quest.png" alt="imagem ilustrativa">
           <button mat-raised-button>Compartilhar resultado</button>
