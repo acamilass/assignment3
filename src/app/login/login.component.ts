@@ -36,19 +36,19 @@ export class LoginComponent implements OnInit {
 
   public loginGoogle(event) {
     event.preventDefault();
-    this.authUser(new firebase.auth.GoogleAuthProvider)
+    this.authUser(new firebase.auth.GoogleAuthProvider);
 
   }
 
   public loginFacebook(event) {
     event.preventDefault();
-    this.authUser(new firebase.auth.FacebookAuthProvider)
+    this.authUser(new firebase.auth.FacebookAuthProvider);
 
   }
 
   public loginGit(event) {
     event.preventDefault();
-    this.authUser(new firebase.auth.GithubAuthProvider)
+    this.authUser(new firebase.auth.GithubAuthProvider);
   }
 
 
@@ -58,7 +58,12 @@ export class LoginComponent implements OnInit {
       .then((credential) => {
         this.updateUserData(credential.user);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if(err.message == "An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.") {
+          this.router.navigate(['info']);
+        }
+        console.log(err)
+      });
   }
 
 
