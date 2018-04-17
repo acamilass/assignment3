@@ -4,6 +4,7 @@ import * as firebase from 'firebase/app';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { AuthProvider } from '@firebase/auth-types';
+import { HelperService } from '../shared/utils/helper.service';
 
 // model user 
 
@@ -69,8 +70,8 @@ export class LoginComponent implements OnInit {
     const data: User = {
       email: user.email,
       nome: user.displayName,
-      data: '', // implementar getData
-      ip: '', // implementar getIP
+      data: HelperService.getData(),
+      ip: HelperService.getIp(), 
       tempo: this.tempo
     };
 
