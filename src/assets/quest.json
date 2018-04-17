@@ -73,7 +73,8 @@
                 {"letra":  "A", "resp": "a remoção de um elemento de uma pilha."},
                 {"letra":  "B", "resp": "a remoção de um elemento de uma fila."},
                 {"letra":  "C", "resp": "a inserção de um elemento em uma fila."},
-                {"letra":  "D", "resp": "a inserção de um elemento em uma pilha."}                
+                {"letra":  "D", "resp": "a inserção de um elemento em uma pilha."},
+                {"letra":  "E", "resp": "nenhuma das anteriores."}                
             ]
         },
         {
