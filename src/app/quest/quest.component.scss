@@ -74,15 +74,13 @@
                         }
     
                         .selecao {
-                            width: 100%;
+                            width: 98%;
                             height: 100%;
                             font-family: 'Quicksand', sans-serif !important;
                            
                         }
 
-                        .selecao[aria-expanded="true"] {
-                            background-color: red;
-                        }
+                        
 
                         
                 }   // agrupar-quest
@@ -154,3 +152,9 @@
     background-color: #4f4f4f !important;
 
   }
+
+  mat-selection-list, button {
+      outline: none !important;
+  }
+
+  

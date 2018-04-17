@@ -2,12 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSelectionList, MatSelectionListChange } from '@angular/material';
 import { QuestService } from './quest.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quest',
   templateUrl: './quest.component.html',
-  styleUrls: ['./quest.component.scss'],
-  providers: [QuestService]
+  styleUrls: ['./quest.component.scss']
 })
 export class QuestComponent implements OnInit {
 
@@ -24,7 +24,7 @@ export class QuestComponent implements OnInit {
   public quests: any = [
     { respostas: [] }
   ];
-  constructor(private quest: QuestService) {
+  constructor(private quest: QuestService, private router: Router) {
 
   }
 
@@ -34,8 +34,6 @@ export class QuestComponent implements OnInit {
     this.createForm();
     this.index = 0;
     this.quest.getQuests().subscribe((pergunta: any) => {
-      console.log(pergunta.json());
-      
       this.quests = pergunta.json().quests // array;
       this.pergunta = this.quests[0].pergunta;
     });
@@ -50,17 +48,34 @@ export class QuestComponent implements OnInit {
   nextQuestion(event) {
     event.preventDefault();
     this.respostas.push(this.resposta.value[0].letra);
-    console.log(this.respostas);
-    this.index++
-    this.img =  `../../assets/images/quest/${this.index + 1}.PNG` ;
+
+    if (this.greaterThan(10)) {
+      this.quest.setResultado(this.respostas);
+      return this.router.navigate(['result']);
+    }
+    this.viewUpdate();
   }
 
   createForm() {
 
-    this.resposta = new FormControl({value: '', disabled: false}, Validators.required);
+    this.resposta = new FormControl({ value: '', disabled: false }, Validators.required);
     this.questFrom = new FormGroup({
       'resposta': this.resposta
     });
+  }
+
+  viewUpdate() {
+    this.index++
+    this.img = `../../assets/images/quest/${this.index + 1}.PNG`;
+    window.scrollTo(0, 0); // sempre scroll no top
+  }
+
+  greaterThan(num): boolean {
+    if ((this.index + 1) === num) {
+      return true;
+    }
+
+    return false;
   }
 
 }

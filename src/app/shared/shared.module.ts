@@ -7,11 +7,11 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCft2BCAxpxOnxJzAcTREHudDpi1RbWOSg",
-  authDomain: "assignment3-mvp.firebaseapp.com",
-  databaseURL: "https://assignment3-mvp.firebaseio.com",
-  projectId: "assignment3-mvp",
-  storageBucket: "assignment3-mvp.appspot.com",
-  messagingSenderId: "272709917432"
+    authDomain: "assignment3-mvp.firebaseapp.com",
+    databaseURL: "https://assignment3-mvp.firebaseio.com",
+    projectId: "assignment3-mvp",
+    storageBucket: "assignment3-mvp.appspot.com",
+    messagingSenderId: "272709917432"
 };
 
 @NgModule({

@@ -2,7 +2,7 @@
 
   <!-- conteudo da esquerda -->
   <div class="screen-left">
-    <img class="login-img" src="../../assets/images/login-desk.png" alt="login-desk">
+    
   </div>
   <!-- conteudo da esquerda -->
 
@@ -11,8 +11,8 @@
     <div class="content_adjust">
       <img class="brand" src="../../assets/images/logo-header-FINAL.png" alt="logo">
       <div class="text">
-        <h1>TITULO</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quod debitis quibusdam perspiciatis sed a sunt ea
+        <h1 class="text-titulo">TITULO</h1>
+        <p class="text-conteudo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quod debitis quibusdam perspiciatis sed a sunt ea
           unde tempore illum quaerat labore quidem excepturi magni amet, nihil maxime doloremque reiciendis?</p>
       </div>
       <form class="myForm">
@@ -20,7 +20,8 @@
         <!-- quest 1 -->
         <div class="select">
           <p class="quest">Há quanto tempo você é dev?</p>
-          <mat-button-toggle-group #group="matButtonToggleGroup">
+          <mat-button-toggle-group #group="matButtonToggleGroup" 
+                                  (change)="onChangeToggle(group.value)">
             <mat-button-toggle aria-label="0-3 anos" value="0-3 anos">
               <span class="toggle-text">0-3 anos</span>
             </mat-button-toggle>
@@ -32,22 +33,20 @@
             </mat-button-toggle>
           </mat-button-toggle-group>
         </div>
-        <!-- quest 1 -->
 
-        <!-- botoes de login -->
-        <div class="buttons-login">
-          <p class="quest2">Para começar, faça o seu login com:</p>
-          <button mat-fab style="background-color: #4267B2">
+        <p class="quest2">Para começar, faça o seu login com:</p>
+        <div class="botoes">
+          <button [disabled]="!disable" (click)="loginFacebook($event)" mat-fab style="background-color: #4267B2">
             <mat-icon aria-label="facebook">
               <i class="fab fa-facebook-f"></i>
             </mat-icon>
           </button>
-          <button mat-fab style="background-color: #DB4437">
+          <button [disabled]="!disable" (click)="loginGoogle($event)" mat-fab style="background-color: #DB4437">
             <mat-icon aria-label="google">
               <i class="fab fa-google-plus-g"></i>
             </mat-icon>
           </button>
-          <button mat-fab class="github" style="background-color: black">
+          <button [disabled]="!disable" (click)="loginGit($event)" mat-fab class="github" style="background-color: black">
             <mat-icon aria-label="github">
               <i class="github fab fa-github"></i>
             </mat-icon>

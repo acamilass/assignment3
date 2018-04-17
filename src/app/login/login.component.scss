@@ -2,128 +2,176 @@
 .container-flex {
     width: 100%;
     height: 100vh;
-}
+    display: flex;
 
 
-.screen-left {
-   
-   float:left;
-   width: 50%;
-   height: 100vh;
-   background-color: #00FF6A;
-}
 
-.login-img {
-    position: absolute;
-    width: 40%;
-    height: auto;
-    left: 60px;
-    top: 40px;
-   
-   
-}
+    .screen-left {
+        background: url('../../assets/images/login-desk.png');
+        background-position: center center;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 100vh;
+        background-color: #00FF6A;
+    }
 
-.content {
-    display: inline-block;
-    width: 50%;
-    height: 100vh;
-    background-color: #333333;
+    .content {
+    
+        width: 50%;
+        height: 100vh;
+        background-color: #333333;
 
-    .content_adjust {
-        margin-top: 30px;
-        margin-left: 80px;
-        color: #FCFCFC;
-        
-
-        .brand {
-            display: block;
-            width: 12.875em;
-            height: 38px;
-            
-        }
-
-        .text {
-            display: inline-block;
-            width: 80%;
-            font-style: normal;
-            font-weight: normal;
-            line-height: normal;
-            font-size: 18px;
-            
-        }
-
-        .myForm {
-
-            select {
-
-                width: 100%;
-
-                .quest {
-                    font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: bold;
-                    line-height: normal;
-                    font-size: 0.8em;
-                }
-
-
-            }
-            
+        .content_adjust {
+            margin-top: 15px;
+            margin-left: 80px;
+            color: #FCFCFC;
             
 
-            mat-button-toggle {
-                background: rgba(0, 255, 12, 0.78);
-                font-size: 0.8em;
-                
-                &:not(:last-child) {
-                    border-right: solid 10px #333333;
-                }
-                
-
-                .toggle-text {
-                    font-family: 'Quicksand' !important;
-                    font-style: normal;
-                    font-weight: bold;
-                    line-height: normal;
-                    font-size: 0.8em;
-                    text-align: center;
-                    color: #F2F2F2; 
-                }
-
-                
+            .brand {
+                display: block;
+                width: 12.875em;
+                height: 38px;
                 
             }
 
-            .quest2 {
-                font-family: 'Montserrat' !important;
+            .text {
+                display: inline-block;
+                width: 80%;
                 font-style: normal;
                 font-weight: normal;
                 line-height: normal;
-                font-size: 14px;
-                color: #FCFCFC;
-                margin-top: 40px !important;
+                font-size: 0.9em;
+                margin-top: 15px;
+
+                .text-titulo {
+                    margin: 0;
+                }
+
+
+                .text-conteudo {
+                    font-size: 0.9em;
+                    letter-spacing: -0.3px;
+                }
+                
+            }
+                
+
+                .select {
+                    width: 100%;
+                
+
+                    
+
+                    .quest {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: bold;
+                        line-height: normal;
+                        font-size: 0.8em;
+                    }
+
+
+                }
+                
+                mat-button-toggle-group { box-shadow: 0 0 0 !important;}
+                .mat-button-toggle-checked {
+                    background: rgba(0, 255, 12, 0.78) !important;
+                }
+
+
+                mat-button-toggle {
+                   
+                    font-size: 0.8em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 6px;
+                    border: solid 1px #6FCF97;
+                    
+                    
+                    .toggle-text {
+                        font-family: 'Quicksand' !important;
+                        font-style: normal;
+                        font-weight: bold;
+                        line-height: normal;
+                        font-size: 0.8em;
+                        text-align: center;
+                        color: #F2F2F2; 
+                    }
+
+                    
+                    
+                }
+
+                .quest2 {
+                    font-family: 'Montserrat' !important;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: normal;
+                    font-size: 14px;
+                    color: #FCFCFC;
+                    margin-top: 40px !important;
+                }
+
+                .github {
+                    background-color: #000000;
+                }
+
             }
 
-            .github {
-                background-color: #000000;
+
+            .botoes > button:not(:last-child) {
+                margin-right: 15px;
             }
+            
 
-        }
+        
+    
 
-    
-    
     }
 
-    
+}
 
+mat-button-toggle label {
+    margin: 0 !important;
 }
 
 
 @media (max-width: 678px) {     
     .content {
-        width: 100%;
+        width: 100% !important;
     }
+
     .screen-left {
          display: none;
     } 
+
+    .content_adjust {
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    .select {
+        margin-top: 30px;
+    }
+
+    .brand {
+        
+        display: initial !important;
+        margin-top: 20px !important;
+    }
+
+    .text {
+        text-align: left !important;
+    }
+
+    mat-button-toggle {
+        background: #13DA1C;
+        mix-blend-mode: normal;
+        border: 1px solid #6FCF97;
+    }
 }
+
+
+

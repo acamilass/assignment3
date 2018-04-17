@@ -1,6 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Router } from '@angular/router';
+import { AuthProvider } from '@firebase/auth-types';
+
+// model user 
+
+interface User {
+  nome: string;
+  email: string;
+  data: any;
+  ip: string;
+  tempo: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -10,37 +23,72 @@ import * as firebase from 'firebase/app';
 })
 export class LoginComponent implements OnInit {
 
-  user: string;
+  public disable: boolean = false;
+  public tempo: string;
 
-  constructor(private af: AngularFireAuth) { }
+  constructor(private af: AngularFireAuth,
+              private db: AngularFireDatabase,
+              private router: Router) { }
 
   ngOnInit() {
   }
 
-  public loginGoogle() {
-    this.af.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider)
-    .then((res) => {
-      console.log(res.user.email);
-      console.log(res.user.displayName);
-    })
-    .catch((err) => console.log(err));
+  public loginGoogle(event) {
+    event.preventDefault();
+    this.authUser(new firebase.auth.GoogleAuthProvider)
+
   }
 
-  public loginFacebook() {
-    this.af.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider)
-    .then((res) => {
-      console.log(res.user.email);
-      console.log(res.user.displayName);
-    })
-    .catch((err) => console.log(err));
+  public loginFacebook(event) {
+    event.preventDefault();
+    this.authUser(new firebase.auth.FacebookAuthProvider)
+
   }
 
-  public loginGit() {
-    this.af.auth.signInWithRedirect(new firebase.auth.GithubAuthProvider)
-    .then((res) => {
-      console.log(res.user.email);
-      console.log(res.user.displayName);
-    })
-    .catch((err) => console.log(err));
+  public loginGit(event) {
+    event.preventDefault();
+    this.authUser(new firebase.auth.GithubAuthProvider)
   }
+
+
+  // autenticar usuario
+  authUser(provider: AuthProvider) {
+    this.af.auth.signInWithPopup(provider)
+      .then((credential) => {
+        this.updateUserData(credential.user);
+      })
+      .catch((err) => console.log(err));
+  }
+
+
+// registrar usuario
+  updateUserData(user) {
+    // referencia do banco
+    const dbRef = this.db.object(`users/${user.uid}`);
+
+    const data: User = {
+      email: user.email,
+      nome: user.displayName,
+      data: '', // implementar getData
+      ip: '', // implementar getIP
+      tempo: this.tempo
+    };
+
+    dbRef.set(data)
+      .then(() => {
+        this.router.navigate(['info']);
+      }).catch((err) => console.log(err));
+
+  }
+
+  // pega valor dos botoes
+  public onChangeToggle(val: string) {
+    this.tempo = val;
+    this.disable = true;
+  }
+
+
+
+
+
 }
