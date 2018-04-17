@@ -5,12 +5,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyA3rC0FnpR4N2GppLlwYuhlnjop1mzXNUM",
-  authDomain: "xpassignment3.firebaseapp.com",
-  databaseURL: "https://xpassignment3.firebaseio.com",
-  projectId: "xpassignment3",
-  storageBucket: "xpassignment3.appspot.com",
-  messagingSenderId: "1008286252347"
+  apiKey: "AIzaSyCft2BCAxpxOnxJzAcTREHudDpi1RbWOSg",
+  authDomain: "assignment3-mvp.firebaseapp.com",
+  databaseURL: "https://assignment3-mvp.firebaseio.com",
+  projectId: "assignment3-mvp",
+  storageBucket: "assignment3-mvp.appspot.com",
+  messagingSenderId: "272709917432"
 };
 
 @NgModule({
