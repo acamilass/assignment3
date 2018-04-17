@@ -14,6 +14,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseApp } from 'angularfire2/angularfire2';
 import { QuestService } from './quest/quest.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { ResultadoService } from './resultado/resultado.service';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
   ],
   providers: [
     QuestService,
+    ResultadoService,
     AngularFireDatabase,
     AuthGuard,
     AuthService],

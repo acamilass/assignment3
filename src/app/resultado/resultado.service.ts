@@ -8,10 +8,9 @@ import { AngularFireDatabase } from 'angularfire2/database';
 @Injectable()
 export class ResultadoService implements Resolve<any> {
 
-  private gabarito: any;
+  private gabarito: any[] = [];
   constructor(private http: Http, private questService: QuestService) {
-    this.http.get('assets/gabarito.json')
-      .subscribe((respostas) => this.gabarito = respostas.json())
+
   }
 
   resolve(
@@ -20,8 +19,17 @@ export class ResultadoService implements Resolve<any> {
   ) {
     return {
       respostas: this.questService.getResultado(),
-      gabarito: this.gabarito
+      gabarito: this.getGabarito()
     };
+  }
+
+  setData() {
+    return this.http.get('assets/gabarito.json')
+      .toPromise().then((respostas) => this.gabarito = respostas.json());
+  }
+
+  getGabarito() {
+    return this.gabarito;
   }
 
 }

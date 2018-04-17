@@ -3,6 +3,7 @@ import { MatSelectionList, MatSelectionListChange } from '@angular/material';
 import { QuestService } from './quest.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ResultadoService } from '../resultado/resultado.service';
 
 @Component({
   selector: 'app-quest',
@@ -24,7 +25,9 @@ export class QuestComponent implements OnInit {
   public quests: any = [
     { respostas: [] }
   ];
-  constructor(private quest: QuestService, private router: Router) {
+  constructor(private quest: QuestService,
+              private resultadoService: ResultadoService,
+              private router: Router) {
 
   }
 
@@ -48,9 +51,10 @@ export class QuestComponent implements OnInit {
   nextQuestion(event) {
     event.preventDefault();
     this.respostas.push(this.resposta.value[0].letra);
-
-    if (this.greaterThan(10)) {
+    this.resultadoService.setData();
+    if (this.equal(10)) {
       this.quest.setResultado(this.respostas);
+     
       return this.router.navigate(['result']);
     }
     this.viewUpdate();
@@ -70,7 +74,7 @@ export class QuestComponent implements OnInit {
     window.scrollTo(0, 0); // sempre scroll no top
   }
 
-  greaterThan(num): boolean {
+  equal(num): boolean {
     if ((this.index + 1) === num) {
       return true;
     }

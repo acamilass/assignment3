@@ -13,7 +13,7 @@ import { QuestService } from '../quest/quest.service';
     ResultadoRoutingModule,
     SharedModule
   ],
-  providers: [ResultadoService],
+  providers: [],
   declarations: [ResultadoComponent]
 })
 export class ResultadoModule { }
