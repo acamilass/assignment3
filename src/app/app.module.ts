@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HeaderModule } from './header/header.module';
 import { HttpModule } from '@angular/http';
+import { AuthGuard } from './core/auth.guard';
+import { AuthService } from './core/auth.service';
 
 
 
@@ -20,6 +22,8 @@ import { HttpModule } from '@angular/http';
     AppRoutingModule,
     SharedModule,
     HeaderModule,
+    AuthGuard,
+    AuthService
     
   ],
   providers: [],
