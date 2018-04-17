@@ -22,6 +22,10 @@ const routes: Routes = [
     path: '',
     loadChildren: 'app/resultado/resultado.module#ResultadoModule',
     canActivate: [AuthGuard]
+  },
+  {             
+    path: '**',             
+    redirectTo: ''         
   }
 
 ];
