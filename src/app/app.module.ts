@@ -9,6 +9,10 @@ import { HeaderModule } from './header/header.module';
 import { HttpModule } from '@angular/http';
 import { AuthGuard } from './core/auth.guard';
 import { AuthService } from './core/auth.service';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { FirebaseApp } from 'angularfire2/angularfire2';
+
+
 
 
 
@@ -22,11 +26,11 @@ import { AuthService } from './core/auth.service';
     AppRoutingModule,
     SharedModule,
     HeaderModule,
-    AuthGuard,
-    AuthService
     
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
