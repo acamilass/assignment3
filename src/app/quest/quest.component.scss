@@ -29,12 +29,14 @@
                 .progressbar {
                     width: 50%;   
                     display: inline-block;
-                    margin: 0;                      
+                    margin: 0;
                 }
 
                 .progressbar-text {
                     margin-left: 20px;
                 }
+
+               
         } //progressbar
         
         .questions {
@@ -142,5 +144,13 @@
     .selecao {
         font-size: 0.7em;
     }
+
+  }
+
+
+// sobreescreve material angular
+.mat-progress-bar:nth-child(2){
+
+    background-color: #4f4f4f !important;
 
   }

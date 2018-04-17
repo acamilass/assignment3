@@ -9,17 +9,17 @@ const routes: Routes = [
     loadChildren: 'app/login/login.module#LoginModule'
   },
   {
-    path: 'quests',
+    path: '',
     loadChildren: 'app/quest/quest.module#QuestModule',
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'info',
     loadChildren: 'app/instrucoes/instrucoes.module#InstrucoesModule',
     canActivate: [AuthGuard]
-  }  ,
+  },
   {
-    path: '',
+    path: 'result',
     loadChildren: 'app/resultado/resultado.module#ResultadoModule',
     canActivate: [AuthGuard]
   }
