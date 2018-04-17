@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ResultadoComponent } from './resultado.component';
+import { ResultadoService } from './resultado.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: ResultadoComponent
+    component: ResultadoComponent,
+    resolve: {
+      response: ResultadoService
+    }
   }
 ];
 

@@ -5,13 +5,13 @@ import { AuthGuard } from './core/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     loadChildren: 'app/login/login.module#LoginModule'
   },
   {
-    path: '',
+    path: 'quests',
     loadChildren: 'app/quest/quest.module#QuestModule',
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'info',

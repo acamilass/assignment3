@@ -4,11 +4,12 @@ import { AngularFireAuth } from 'angularfire2/auth';
 @Injectable()
 export class AuthService {
 
-  public authState: any = null;    
-  
-  constructor(private af: AngularFireAuth) {     
-    this.af.authState.subscribe(auth => {       
-    this.authState = auth;     });   
+  public authState: any = null;
+
+  constructor(private af: AngularFireAuth) {
+    this.af.authState.subscribe(auth => {
+      this.authState = auth;
+    });
   }
 
   // Returns true if user is logged in

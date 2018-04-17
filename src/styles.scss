@@ -40,3 +40,20 @@ html, body {
 .mat-selection-list .mat-list-option .mat-list-text {
   padding-right: 0 !important;
 }
+
+label {
+  margin: 0;
+}
+
+.mat-progress-bar .mat-progress-bar-buffer {
+  background: #4f4f4f;
+  border: 1px solid #fff;
+}
+.mat-progress-bar-fill::after {
+  background-color: #fff !important;
+}
+
+
+mat-list-option[aria-expanded="true"] {
+  background-color: red !important;
+}

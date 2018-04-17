@@ -12,6 +12,9 @@ import { AuthGuard } from './core/auth.guard';
 import { AuthService } from './core/auth.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseApp } from 'angularfire2/angularfire2';
+import { QuestService } from './quest/quest.service';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { ResultadoService } from './resultado/resultado.service';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { FirebaseApp } from 'angularfire2/angularfire2';
     
   ],
   providers: [
+    QuestService,
+    ResultadoService,
+    AngularFireDatabase,
     AuthGuard,
     AuthService],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+[ {
+  "resp" : "A",
+  "score" : 1
+}, {
+  "resp" : "B",
+  "score" : 1
+}, {
+  "resp" : "E",
+  "score" : 1
+}, {
+  "resp" : "B",
+  "score" : 2
+}, {
+  "resp" : "E",
+  "score" : 2
+}, {
+  "resp" : "E",
+  "score" : 2
+}, {
+  "resp" : "A",
+  "score" : 2
+}, {
+  "resp" : "E",
+  "score" : 2
+}, {
+  "resp" : "C",
+  "score" : 2
+}, {
+  "resp" : "B",
+  "score" : 2
+} ]
