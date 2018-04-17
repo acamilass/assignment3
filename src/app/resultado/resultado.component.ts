@@ -16,11 +16,7 @@ export class ResultadoComponent implements OnInit {
   private resultado: resultado = {};
   public conhecimento: string;
   public imagem: string;
-  public texto: string = `O resultado do seu conhecimento foi Desenvolvedor Júnior. Você é capaz de reconhecer os conceitos básicos e a sintaxe do JavaScript e HTML. Consegue entender como se estrutura algumas funções da linguagem e suas aplicações práticas. Continue praticando que logo logo você terá um maior domínio da linguagem.
-        
-  Tempo de experiência: Até 2 anos.
-  
-  Faixa Salarial: R$2000 - R$4000`;
+  public texto: string;
 
   constructor(private route: ActivatedRoute) { }
 
