@@ -7,7 +7,7 @@
     
         <img class="result-image" [src]="imagem" alt="imagem ilustrativa">
         <div class="conteudo">
-          <p class="texto" [outerHTML]="texto"></p>
+          <pre style="white-space:pre-wrap;" class="texto">{{texto}}</pre>
           
           <img class="img-ilustrativa" src="../../assets/images/bg-quest.png" alt="imagem ilustrativa">
           <button mat-raised-button>Compartilhar resultado</button>

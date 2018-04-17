@@ -62,18 +62,31 @@ export class ResultadoComponent implements OnInit {
       case ( 5 < score &&  score <= 10):
         this.conhecimento = 'Pleno'
         this.imagem = '../../assets/images/pleno.png'
-        this.texto = ``;
+        this.texto = `O resultado do seu conhecimento foi Desenvolvedor Pleno. Você já tem um conhecimento mais aprofundado dos conceitos da linguagem e tem familiaridade com a biblioteca JQuery e com Node JS. Continue praticando e jajá você se tornará um expert.
+
+        \nTempo de experiência: 2 a 5 anos
+        
+        \nFaixa Salarial: R$4000 - R$6000`;
         break;
       case ( 11 <= score):
         this.conhecimento = 'Senior'
         this.imagem = '../../assets/images/senior.png';
-        this.texto = ``;
+        this.texto = `Você mandou muito bem no teste e seu nível de conhecimento é de um Desenvolvedor Senior. Você demonstrou saber o que está fazendo quando o assunto é programação com Javascript. Parabéns e continue sempre praticando!
+
+        Tempo de experiência: Mais de 5 anos
+        
+        Faixa Salarial: R$6000 - R$10000`;
         break;
   
       default:
         this.conhecimento = 'Júnior'
         this.imagem = '../../assets/images/junior.png';
-        this.texto = ``;
+        this.texto = `O resultado do seu conhecimento foi Desenvolvedor Júnior. 
+        Você é capaz de reconhecer os conceitos básicos e a sintaxe do JavaScript e HTML. Consegue entender como se estrutura algumas funções da linguagem e suas aplicações práticas. Continue praticando que logo logo você terá um maior domínio da linguagem.
+        
+        Tempo de experiência: Até 2 anos.
+        
+        Faixa Salarial: R$2000 - R$4000`;
         break;
     }
   }
