@@ -37,17 +37,17 @@
         <!-- botoes de login -->
         <div class="buttons-login">
           <p class="quest2">Para começar, faça o seu login com:</p>
-          <button mat-fab style="background-color: #4267B2">
+          <button (click)="loginFacebook()" mat-fab style="background-color: #4267B2">
             <mat-icon aria-label="facebook">
               <i class="fab fa-facebook-f"></i>
             </mat-icon>
           </button>
-          <button mat-fab style="background-color: #DB4437">
+          <button (click)="loginGoogle()" mat-fab style="background-color: #DB4437">
             <mat-icon aria-label="google">
               <i class="fab fa-google-plus-g"></i>
             </mat-icon>
           </button>
-          <button mat-fab class="github" style="background-color: black">
+          <button (click)="loginGit()" mat-fab class="github" style="background-color: black">
             <mat-icon aria-label="github">
               <i class="github fab fa-github"></i>
             </mat-icon>
