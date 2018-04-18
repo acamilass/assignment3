@@ -53,7 +53,7 @@
 
 
                 .text-conteudo {
-                    font-size: 0.9em;
+                    font-size: 0.8em;
                     letter-spacing: -0.3px;
                     margin-top: 15px;
                     font-size: 15px;
@@ -116,7 +116,7 @@
                     line-height: normal;
                     font-size: 14px;
                     color: #FCFCFC;
-                    margin-top: 25px !important;
+                    margin-top: 25px;
                 }
 
                 .github {
@@ -185,5 +185,49 @@ mat-button-toggle label {
     
 }
 
+
+
+@media (max-width: 1039px) { 
+    .screen-left { height: 100vh !important;}
+    .content { height:  100vh !important;}
+    .content_adjust {
+        margin-left: 60px;
+    }
+    .quest2 { margin-top:  15px !important;   }
+ }
+
+
+ @media (max-width: 996px) { 
+    .content_adjust {
+        margin-left: 32px !important;
+    }
+    .quest2 { margin-top:  15px !important;   }
+ }
+
+
+ @media (max-width: 948px) { 
+    .text {
+      width: 87% !important;
+    }
+ }
+
+
+ @media (max-width: 882px) { 
+    .text-titulo {
+      margin-top: 0 !important;
+    }
+    .brand { margin-top: 0 }
+ }
+
+ @media (max-width: 429px) { 
+    .text-conteudo {
+      margin-bottom: 0 !important;
+    }
+    .brand { margin-top: 15px }
+
+    .select { margin-top: 0 !important}
+
+    .text-conteudo { font-weight: 0.7em !important; }
+ }
 
 
