@@ -13,6 +13,7 @@ $font-family: 'Quicksand', sans-serif;
     height: 60px;
     background-color: $header-color;
     font-weight: bolder;
+    height: 120px;
     
 
     .header-text {
@@ -32,6 +33,10 @@ $font-family: 'Quicksand', sans-serif;
     margin: 0;
 
     .conteudo {
+
+        margin-top: 70px;
+        margin-right: 80px;
+        font-size: 20px;
 
         .img-ilustrativa {  display: none; }
 
@@ -53,13 +58,15 @@ $font-family: 'Quicksand', sans-serif;
         float: left;
         height: 454px;
         width: 40%;
+        margin-top: 90px;
 
     } // conteudo
 
     .texto {
         font-family: 'Quicksand';
-        margin-top: 30px;
-        margin-right: 70px;
+        margin-top: 70px;
+        margin-right: 80px;
+        font-size: 20px;
     }
 
    
