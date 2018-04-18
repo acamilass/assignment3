@@ -31,10 +31,10 @@
         {
             "pergunta": 4,
             "respostas": [
-                {"letra":  "A", "resp": "Colin Ihrig"},
-                {"letra":  "B", "resp": "Aurelio de Rosa"},
-                {"letra":  "C", "resp": "John Doe"},
-                {"letra":  "D", "resp": "Undefined"}               
+                {"letra":  "A", "resp": "John Doe e Colin Ihrig"},
+                {"letra":  "B", "resp": "Aurelio de Rosa e John Doe"},
+                {"letra":  "C", "resp": "Colin Ihrig"},
+                {"letra":  "D", "resp": "Undefined e Aurelio de Rosa"}               
             ]
         },
         {
