@@ -28,7 +28,7 @@
               
               
                 <mat-selection-list #questions formControlName="resposta">
-                    <div class="agrupar-quest" *ngFor="let resposta of quests[index].respostas">
+                    <div class="animated fadeInLeft agrupar-quest" *ngFor="let resposta of quests[index].respostas">
                         <div class="alternativa"><span style="font-weight: bold" class="letra">{{resposta.letra}}</span></div>
                         <mat-list-option class="selecao" 
                                          [selected]

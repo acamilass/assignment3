@@ -56,3 +56,9 @@ label {
 mat-list-option[aria-expanded="true"] {
   background-color: red !important;
 }
+
+@media only screen and (max-width: 519px) {
+  mat-list-option {
+    font-weight: 600 !important;
+  }
+}

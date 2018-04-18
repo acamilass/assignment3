@@ -55,6 +55,7 @@ $font-family: 'Quicksand', sans-serif;
 
 
     .result-image {
+
         float: left;
         height: 454px;
         width: 40%;
@@ -63,6 +64,7 @@ $font-family: 'Quicksand', sans-serif;
     } // conteudo
 
     .texto {
+
         font-family: 'Quicksand';
         margin-top: 70px;
         margin-right: 80px;
@@ -84,8 +86,8 @@ $font-family: 'Quicksand', sans-serif;
     }
 
     .conteudo {
-        margin: 15px 50px;
-        text-align: center;
+        margin:  20px !important;
+        text-align: left;
 
         .texto {
             text-align: left;
@@ -94,12 +96,17 @@ $font-family: 'Quicksand', sans-serif;
 
         .img-ilustrativa {
             width: 240px;
-            margin-bottom: 30px;
-            display: inline-block !important;
+            // margin-bottom: 30px;
+            display: block !important;
+            margin: 0 auto;
             
         }
+
+        
     }
     
     .result-image { display: none }
+
+    
     
  }

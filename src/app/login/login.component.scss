@@ -81,7 +81,7 @@
                 
                 mat-button-toggle-group { box-shadow: 0 0 0 !important;}
                 .mat-button-toggle-checked {
-                    background: rgba(0, 255, 12, 0.78) !important;
+                    background: rgba(0, 255, 12, 0.78);
                 }
 
 
@@ -176,6 +176,13 @@ mat-button-toggle label {
         mix-blend-mode: normal;
         border: 1px solid #6FCF97;
     }
+
+    .content {
+        .mat-button-toggle-checked {
+            background: #333333 !important;
+        }
+    }
+    
 }
 
 
