@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 interface resultado {
   respostas?: any[];
@@ -18,7 +20,8 @@ export class ResultadoComponent implements OnInit {
   public imagem: string;
   public texto: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+              private dialog: MatDialog) { }
 
   ngOnInit() {
     this.route.data
@@ -51,6 +54,13 @@ export class ResultadoComponent implements OnInit {
         return gabarito[index].score
       }
       return 0;
+    });
+  }
+
+
+  public openModal() {
+    this.dialog.open(FeedbackComponent, {
+      width: '50%'
     });
   }
 

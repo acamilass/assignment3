@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,13 +16,15 @@ import { QuestService } from './quest/quest.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ResultadoService } from './resultado/resultado.service';
 import { MarkdownModule } from 'ngx-markdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+  // BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     AppRoutingModule,
     SharedModule,
