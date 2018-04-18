@@ -16,7 +16,8 @@ export class QuestComponent implements OnInit {
   public respostas: String[] = [];
   public pergunta: string;
   public index: number;
-  public img: string = `../../assets/images/quest/1.PNG`;
+  // public img: string = `../../assets/images/quest/1.PNG`;
+  public md: string = `../../assets/mds/1.md`;
   public questFrom: FormGroup;
   public resposta: FormControl;
 
@@ -70,7 +71,8 @@ export class QuestComponent implements OnInit {
 
   viewUpdate() {
     this.index++
-    this.img = `../../assets/images/quest/${this.index + 1}.PNG`;
+    // this.img = `../../assets/images/quest/${this.index + 1}.PNG`;
+    this.md = `../../assets/mds/${this.index + 1}.md`;
     window.scrollTo(0, 0); // sempre scroll no top
   }
 

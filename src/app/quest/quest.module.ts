@@ -5,6 +5,7 @@ import { QuestRoutingModule } from './quest-routing.module';
 import { QuestComponent } from './quest.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     QuestRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule 
+    SharedModule,
+    MarkdownModule.forChild()
   ],
   declarations: [QuestComponent]
 })

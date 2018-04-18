@@ -15,7 +15,7 @@ import { FirebaseApp } from 'angularfire2/angularfire2';
 import { QuestService } from './quest/quest.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ResultadoService } from './resultado/resultado.service';
-
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { ResultadoService } from './resultado/resultado.service';
     AppRoutingModule,
     SharedModule,
     HeaderModule,
+    MarkdownModule.forRoot()
     
   ],
   providers: [

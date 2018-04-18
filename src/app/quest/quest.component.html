@@ -16,7 +16,14 @@
         <div class="questions">
      
             <form class="questFrom" novalidate [formGroup]="questFrom" (ngSubmit)="nextQuestion($event)"> 
-              <img [src]="img" alt="pergunta1">
+              <!-- <img [src]="img" alt="pergunta1"> -->
+            
+                    <markdown [src]='md'
+                              style="color:#fff;">
+                   </markdown>
+         
+
+          
               
               
               
