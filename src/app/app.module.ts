@@ -36,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     QuestService,
     ResultadoService,
     AngularFireDatabase,
+    AngularFireAuth,
     AuthGuard,
     AuthService],
   bootstrap: [AppComponent]

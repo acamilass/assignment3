@@ -13,7 +13,7 @@ $font-family: 'Quicksand', sans-serif;
     height: 60px;
     background-color: $header-color;
     font-weight: bolder;
-    height: 120px;
+    height: 60px;
     
 
     .header-text {
@@ -32,13 +32,17 @@ $font-family: 'Quicksand', sans-serif;
     display: contents;
     margin: 0;
 
+
     .conteudo {
 
-        margin-top: 70px;
+        margin-top: 40px;
         margin-right: 80px;
-        font-size: 20px;
+        margin-left: 40%;
+        font-size: 0.9em;
 
         .img-ilustrativa {  display: none; }
+
+        
 
         & > button {
             font-family: 'Quicksand';
@@ -55,11 +59,12 @@ $font-family: 'Quicksand', sans-serif;
 
 
     .result-image {
-
+        position: absolute;
         float: left;
         height: 454px;
         width: 40%;
         margin-top: 90px;
+        margin-left: 60px;
 
     } // conteudo
 
@@ -69,10 +74,15 @@ $font-family: 'Quicksand', sans-serif;
         margin-top: 70px;
         margin-right: 80px;
         font-size: 20px;
+
+        
     }
 
+    
    
 }
+
+
 
 @media only screen and (max-width: 519px) {
 
@@ -91,21 +101,28 @@ $font-family: 'Quicksand', sans-serif;
 
         .texto {
             text-align: left;
+
+            img.img-ilustrativa {
+                width: 240px !important;
+                // margin-bottom: 30px;
+                display: block !important;
+                margin: 0 auto !important;
+                
+            }
         }
 
-
-        .img-ilustrativa {
-            width: 240px;
-            // margin-bottom: 30px;
-            display: block !important;
+        .btn-resultado {
             margin: 0 auto;
-            
         }
 
         
+
+        
     }
+
     
-    .result-image { display: none }
+    
+    .result-image { display: none !important }
 
     
     

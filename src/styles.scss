@@ -2,7 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html {
- // height: 100%;
+  height: 100%;
 }
 
 body { 
@@ -61,6 +61,18 @@ label {
 mat-list-option[aria-expanded="true"] {
   background-color: red !important;
 }
+
+.img-ilustrativa {  display: none; }
+
+@media only screen and (max-width: 519px) {
+    .img-ilustrativa {
+      width: 240px !important;
+      // margin-bottom: 30px;
+      display: block !important;
+      margin: 0 auto !important;
+      
+  }
+ }
 
 @media only screen and (max-width: 519px) {
   mat-list-option {

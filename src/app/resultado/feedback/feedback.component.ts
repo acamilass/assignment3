@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'app-feedback',
@@ -29,9 +30,10 @@ export class FeedbackComponent implements OnInit {
   }
 
   public send() {
-    const dbRef = this.db.list(`feedback`);
-    dbRef.push(this.feedback.value);
-    console.log('salvado')
+    const uid =  this.db.database.app.auth().currentUser.uid;
+    const dbRef = this.db.object(`feedback/${uid}`);
+    dbRef.update({"feedback": this.feedback.value.toString().replace(/\n/g,' ')});
+  
   }
 
 }

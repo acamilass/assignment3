@@ -5,6 +5,7 @@ import { Http  } from '@angular/http';
 export class QuestService {
 
   private resultados: string[];
+  private time: number;
 
   constructor(private http: Http) { }
 
@@ -12,12 +13,16 @@ export class QuestService {
    return this.http.get('assets/quest.json');
   }
 
-  setResultado(resultados) {
+  setResultado(resultados, time) {
     this.resultados = resultados
+    this.time = time;
   }
 
-  getResultado(): String[] {
-    return this.resultados;
+  getResultado(): any {
+    return {
+      resultados: this.resultados,
+      time: this.time
+      };
   }
 
 }

@@ -23,9 +23,11 @@ export class ResultadoService implements Resolve<any> {
     };
   }
 
-  setData() {
-    return this.http.get('assets/gabarito.json')
-      .toPromise().then((respostas) => this.gabarito = respostas.json());
+ async setData() {
+    return await this.http.get('assets/gabarito.json')
+      .toPromise().then((respostas) =>  {
+       return this.gabarito = respostas.json()
+      });
   }
 
   getGabarito() {

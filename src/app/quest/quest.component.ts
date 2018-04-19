@@ -21,6 +21,9 @@ export class QuestComponent implements OnInit {
   public questFrom: FormGroup;
   public resposta: FormControl;
 
+  private startTime: number = new Date().getTime();
+  private endTime: number;
+
   @ViewChild(MatSelectionList) questions: MatSelectionList;
 
   public quests: any = [
@@ -49,13 +52,14 @@ export class QuestComponent implements OnInit {
   }
 
 
-  nextQuestion(event) {
+ async nextQuestion(event) {
     event.preventDefault();
     this.respostas.push(this.resposta.value[0].letra);
-    this.resultadoService.setData();
+    
+
     if (this.equal(10)) {
-      this.quest.setResultado(this.respostas);
-     
+     await this.resultadoService.setData();
+      this.quest.setResultado(this.respostas, this.getTime());
       return this.router.navigate(['result']);
     }
     this.viewUpdate();
@@ -67,6 +71,11 @@ export class QuestComponent implements OnInit {
     this.questFrom = new FormGroup({
       'resposta': this.resposta
     });
+  }
+
+  getTime() {
+    this.endTime = new Date().getTime();
+    return (this.endTime - this.startTime) / 1000
   }
 
   viewUpdate() {
