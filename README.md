@@ -39,8 +39,8 @@ Por fim, realizar o deploy
 
 
 ### Exportar CSV
-> **Pré-requisito:** npm install
+> **Pré-requisito:** npm install, na pasta **CSV** no arquivo **url.json** adicionar o url dos */users* do firebase
 
 > **Comando:** npm run csv
 
-Arquivo CSV (leads.csv e validacao.csv) será gerado na raiz do projeto.
+Arquivo CSV (leads.csv) será gerado na raiz do projeto.
