@@ -80,7 +80,7 @@ export class ResultadoComponent implements OnInit {
 
   viewResult(score) {
     switch (true) {
-      case ( 5 < score &&  score <= 10):
+      case ( 8 < score &&  score <= 13):
         this.conhecimento = 'Pleno'
         this.imagem = '../../assets/images/pleno.png'
         this.texto = ` <h5><b>O resultado do seu conhecimento foi Desenvolvedor Pleno.</b></h5><p> Você já tem um conhecimento 
@@ -95,7 +95,7 @@ export class ResultadoComponent implements OnInit {
       <p><a href="https://www.udemy.com/refactoru-intermediate-js/">Intermediate JavaScript Development</a></p>`;
       this.salvarResultado();
         break;
-      case ( 11 <= score):
+      case ( 14 <= score):
         this.conhecimento = 'Senior'
         this.imagem = '../../assets/images/senior.png';
         this.texto = `<h5>Você mandou muito bem no teste e <b>seu nível de conhecimento é de um Desenvolvedor Senior.</b></h5><p> 
