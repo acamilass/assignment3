@@ -32,7 +32,10 @@ export class AuthGuard implements CanActivate {
   ): Observable<boolean> {
     return this.af.authState
       .take(1)
-      .map(user => !!user)
+      .map(user => {
+        window.localStorage.setItem('currentUser', this.af.app.auth().currentUser.uid);
+        return!!user
+      })
       .do(loggedIn => {
         if (!loggedIn) {
           console.log("access denied");

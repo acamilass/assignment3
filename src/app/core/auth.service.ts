@@ -17,4 +17,10 @@ export class AuthService {
     return this.authState !== null;
   }
 
+  // Returns current user UID
+  get currentUserId(): any {
+    const uid  = window.localStorage.getItem('currentUser');
+    return uid ? uid : false;
+  }
+
 }

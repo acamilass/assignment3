@@ -9,6 +9,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class ResultadoService implements Resolve<any> {
 
   private gabarito: any[] = [];
+  private vcr: any;
   constructor(private http: Http, private questService: QuestService) {
 
   }
@@ -32,6 +33,14 @@ export class ResultadoService implements Resolve<any> {
 
   getGabarito() {
     return this.gabarito;
+  }
+
+  getVCR() {
+    return this.vcr;
+  }
+
+  setVCR(vcr) {
+    this.vcr = vcr;
   }
 
 }

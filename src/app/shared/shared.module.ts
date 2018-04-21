@@ -5,6 +5,7 @@ import { MaterialModule } from './material/material.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { UtilsModule } from './utils/utils.module';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCft2BCAxpxOnxJzAcTREHudDpi1RbWOSg",
@@ -18,6 +19,7 @@ export const firebaseConfig = {
 @NgModule({
   imports: [
     CommonModule,
+    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     UtilsModule,

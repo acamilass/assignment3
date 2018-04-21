@@ -10,33 +10,32 @@ import { HeaderModule } from './header/header.module';
 import { HttpModule } from '@angular/http';
 import { AuthGuard } from './core/auth.guard';
 import { AuthService } from './core/auth.service';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { FirebaseApp } from 'angularfire2/angularfire2';
 import { QuestService } from './quest/quest.service';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { ResultadoService } from './resultado/resultado.service';
 import { MarkdownModule } from 'ngx-markdown';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-  // BrowserModule,
+    BrowserModule,
+    ToastModule.forRoot(),
     BrowserAnimationsModule,
     HttpModule,
     AppRoutingModule,
     SharedModule,
     HeaderModule,
     MarkdownModule.forRoot()
-    
   ],
   providers: [
     QuestService,
     ResultadoService,
-    AngularFireDatabase,
-    AngularFireAuth,
     AuthGuard,
     AuthService],
   bootstrap: [AppComponent]

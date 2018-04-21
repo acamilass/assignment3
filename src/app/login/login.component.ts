@@ -5,6 +5,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import { AuthProvider } from '@firebase/auth-types';
 import { HelperService } from '../shared/utils/helper.service';
+import { AuthService } from '../core/auth.service';
 
 // model user 
 
@@ -20,7 +21,7 @@ interface User {
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [AngularFireAuth]
+  providers: []
 })
 export class LoginComponent implements OnInit {
 
@@ -29,9 +30,14 @@ export class LoginComponent implements OnInit {
 
   constructor(private af: AngularFireAuth,
               private db: AngularFireDatabase,
-              private router: Router) { }
+              private authService: AuthService,
+              private router: Router) {
+  }
 
   ngOnInit() {
+    if(this.authService.currentUserId) {
+      this.router.navigate(['info']);
+    }
   }
 
   public loginGoogle(event) {
@@ -59,8 +65,8 @@ export class LoginComponent implements OnInit {
         this.updateUserData(credential.user);
       })
       .catch((err) => {
-        if(err.message == "An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.") {
-          this.router.navigate(['info']);
+        if(err.code == "auth/account-exists-with-different-credential") {
+         return this.router.navigate(['info']);
         }
         console.log(err)
       });

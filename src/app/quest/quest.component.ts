@@ -12,7 +12,7 @@ import { ResultadoService } from '../resultado/resultado.service';
 })
 export class QuestComponent implements OnInit {
 
-
+  public botaoTXT:string = 'Próxima'
   public respostas: String[] = [];
   public pergunta: string;
   public index: number;
@@ -82,6 +82,9 @@ export class QuestComponent implements OnInit {
     this.index++
     // this.img = `../../assets/images/quest/${this.index + 1}.PNG`;
     this.md = `../../assets/mds/${this.index + 1}.md`;
+    if((this.index + 1) == 10) {
+      this.botaoTXT = 'Finalizar';
+    }
     window.scrollTo(0, 0); // sempre scroll no top
   }
 

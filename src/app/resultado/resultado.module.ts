@@ -18,6 +18,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [],
   declarations: [ResultadoComponent, FeedbackComponent],
-  entryComponents: [FeedbackComponent]
+  entryComponents: [ResultadoComponent, FeedbackComponent]
 })
 export class ResultadoModule { }
